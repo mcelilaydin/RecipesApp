@@ -60,16 +60,72 @@
 		4CC8F73C286E7BC60018A41F /* RecipesApp */ = {
 			isa = PBXGroup;
 			children = (
-				4CC8F73D286E7BC60018A41F /* AppDelegate.swift */,
-				4CC8F73F286E7BC60018A41F /* SceneDelegate.swift */,
-				4CC8F741286E7BC60018A41F /* ViewController.swift */,
-				4CC8F743286E7BC60018A41F /* Main.storyboard */,
+				4CC8F75D286E7DB00018A41F /* Service */,
+				4CC8F75C286E7DAB0018A41F /* View */,
+				4CC8F75B286E7DA50018A41F /* Cell */,
+				4CC8F75A286E7D9F0018A41F /* ViewModel */,
+				4CC8F759286E7D990018A41F /* Model */,
+				4CC8F758286E7D910018A41F /* StoryBoard */,
+				4CC8F757286E7D860018A41F /* Core */,
 				4CC8F749286E7BC90018A41F /* Assets.xcassets */,
-				4CC8F74B286E7BC90018A41F /* LaunchScreen.storyboard */,
 				4CC8F74E286E7BC90018A41F /* Info.plist */,
 				4CC8F746286E7BC60018A41F /* RecipesApp.xcdatamodeld */,
 			);
 			path = RecipesApp;
+			sourceTree = "<group>";
+		};
+		4CC8F757286E7D860018A41F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8F73D286E7BC60018A41F /* AppDelegate.swift */,
+				4CC8F73F286E7BC60018A41F /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4CC8F758286E7D910018A41F /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8F74B286E7BC90018A41F /* LaunchScreen.storyboard */,
+				4CC8F743286E7BC60018A41F /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		4CC8F759286E7D990018A41F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CC8F75A286E7D9F0018A41F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CC8F75B286E7DA50018A41F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4CC8F75C286E7DAB0018A41F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8F741286E7BC60018A41F /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CC8F75D286E7DB00018A41F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
