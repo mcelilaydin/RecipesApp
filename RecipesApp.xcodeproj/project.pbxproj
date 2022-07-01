@@ -14,6 +14,7 @@
 		4CC8F748286E7BC60018A41F /* RecipesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8F746286E7BC60018A41F /* RecipesApp.xcdatamodeld */; };
 		4CC8F74A286E7BC90018A41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8F749286E7BC90018A41F /* Assets.xcassets */; };
 		4CC8F74D286E7BC90018A41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8F74B286E7BC90018A41F /* LaunchScreen.storyboard */; };
+		4CC8F756286E7D0A0018A41F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC8F755286E7D0A0018A41F /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC8F756286E7D0A0018A41F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = RecipesApp;
+			packageProductDependencies = (
+				4CC8F755286E7D0A0018A41F /* Alamofire */,
+			);
 			productName = RecipesApp;
 			productReference = 4CC8F73A286E7BC60018A41F /* RecipesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 4CC8F731286E7BC60018A41F;
+			packageReferences = (
+				4CC8F754286E7D0A0018A41F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4CC8F73B286E7BC60018A41F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CC8F754286E7D0A0018A41F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CC8F755286E7D0A0018A41F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CC8F754286E7D0A0018A41F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4CC8F746286E7BC60018A41F /* RecipesApp.xcdatamodeld */ = {
