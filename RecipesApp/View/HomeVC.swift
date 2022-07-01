@@ -81,5 +81,13 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource,UISearchResultsUpda
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailVC
+        let recipesVM = recipeListVM.recipes
+        vc?.detailData = recipesVM[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
+        return indexPath
+    }
    
 }

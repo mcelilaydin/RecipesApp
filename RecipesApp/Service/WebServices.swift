@@ -33,5 +33,24 @@ class WebServices{
                 
         }.resume()
     }
+    
+    func nutritionID(url:URL,id:Int,completion: @escaping (Nutritions) -> ()){
+        
+        let params = ["id" : id]
+        
+        AF.request(url as URLConvertible, method: .get, parameters: params , encoder: URLEncodedFormParameterEncoder.default, headers: WebServices.header).response { response in
+            
+            if response.response?.statusCode != 200 {
+                print("Status code is not 200")
+            }
+            
+            let result = try? JSONDecoder().decode(Nutritions.self, from: response.data!)
+            
+            if let result = result {
+                completion(result)
+            }
+            
+        }.resume()
+    }
 
 }
