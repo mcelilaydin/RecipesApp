@@ -15,6 +15,8 @@
 		4CC8F74A286E7BC90018A41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8F749286E7BC90018A41F /* Assets.xcassets */; };
 		4CC8F74D286E7BC90018A41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8F74B286E7BC90018A41F /* LaunchScreen.storyboard */; };
 		4CC8F756286E7D0A0018A41F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC8F755286E7D0A0018A41F /* Alamofire */; };
+		4CC8F75F286E7E3C0018A41F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8F75E286E7E3C0018A41F /* Recipe.swift */; };
+		4CC8F761286E7E5B0018A41F /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8F760286E7E5B0018A41F /* WebServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		4CC8F749286E7BC90018A41F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CC8F74C286E7BC90018A41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CC8F74E286E7BC90018A41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC8F75E286E7E3C0018A41F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		4CC8F760286E7E5B0018A41F /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		4CC8F759286E7D990018A41F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CC8F75E286E7E3C0018A41F /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		4CC8F75D286E7DB00018A41F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4CC8F760286E7E5B0018A41F /* WebServices.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 			files = (
 				4CC8F742286E7BC60018A41F /* ViewController.swift in Sources */,
 				4CC8F73E286E7BC60018A41F /* AppDelegate.swift in Sources */,
+				4CC8F761286E7E5B0018A41F /* WebServices.swift in Sources */,
 				4CC8F740286E7BC60018A41F /* SceneDelegate.swift in Sources */,
 				4CC8F748286E7BC60018A41F /* RecipesApp.xcdatamodeld in Sources */,
+				4CC8F75F286E7E3C0018A41F /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
