@@ -24,10 +24,13 @@ class DetailVC: UIViewController {
     
     var detailData : Resultt?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUp()
+        
     }
     
     func setUp(){
