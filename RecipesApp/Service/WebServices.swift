@@ -52,6 +52,26 @@ class WebServices{
             
         }.resume()
     }
+    
+    func summarize(url: URL, id: Int, completion: @escaping (Summary) -> ()){
+        
+        let params = ["id" : id]
+        
+        AF.request(url as URLConvertible, method: .get, parameters: params , encoder: URLEncodedFormParameterEncoder.default, headers: WebServices.header).response { response in
+            
+            if response.response?.statusCode != 200 {
+                print("Status code is not 200")
+            }
+            
+            let result = try? JSONDecoder().decode(Summary.self, from: response.data!)
+            
+            if let result = result {
+                completion(result)
+            }
+            
+        }.resume()
+        
+    }
 
     func ingredients(url:URL, id:Int,completion: @escaping ([Ingredient]) -> ()){
         

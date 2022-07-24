@@ -18,7 +18,10 @@ class DetailVC: UIViewController {
     @IBOutlet weak var proteinLabel: UILabel!
     @IBOutlet weak var carbsLabel: UILabel!
     
+    @IBOutlet weak var summaryLabel: UILabel!
+    
     private var nutritionVM : NutritionViewModel!
+    private var summarizeVM : SummarizeViewModel!
     
     var data = Data()
     
@@ -35,15 +38,24 @@ class DetailVC: UIViewController {
     
     func setUp(){
        
-        guard let url = URL(string:"https://api.spoonacular.com/recipes/\(detailData?.id ?? 0)/nutritionWidget.json") ?? nil else { return }
+        guard let nutritionUrl = URL(string:"https://api.spoonacular.com/recipes/\(detailData?.id ?? 0)/nutritionWidget.json") ?? nil else { return }
         
-        WebServices().nutritionID(url: url, id: detailData!.id) { nutrition in
+        guard let summarizeUrl = URL(string: "https://api.spoonacular.com/recipes/\(detailData?.id ?? 0)/summary") ?? nil else { return }
+        
+        WebServices().nutritionID(url: nutritionUrl, id: detailData!.id) { nutrition in
+            
+            WebServices().summarize(url: summarizeUrl, id: self.detailData!.id) { summary in
+                
             self.nutritionVM = NutritionViewModel(nutrition)
+            self.summarizeVM = SummarizeViewModel(summary)
+                
             DispatchQueue.main.async {
                 self.proteinLabel.text = "Protein\n\(self.nutritionVM.protein ?? "")"
                 self.fatLabel.text = "Fat\n\(self.nutritionVM.fat ?? "")"
                 self.caloriesLabel.text = "Calories\n\(self.nutritionVM.calories ?? "")"
                 self.carbsLabel.text = "Carbs\n\(self.nutritionVM.carbs ?? "")"
+                
+                self.summaryLabel.text = self.summarizeVM.summary ?? ""
                 
                 if let urlString = URL(string: self.detailData?.image ?? ""){
                     DispatchQueue.main.async {
@@ -54,6 +66,7 @@ class DetailVC: UIViewController {
                             }
                         }catch{
                             print("ErrorImage")
+                            }
                         }
                     }
                 }
@@ -61,6 +74,4 @@ class DetailVC: UIViewController {
             }
         }
     }
-    
-    
 }
