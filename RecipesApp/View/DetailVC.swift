@@ -55,7 +55,11 @@ class DetailVC: UIViewController {
                 self.caloriesLabel.text = "Calories\n\(self.nutritionVM.calories ?? "")"
                 self.carbsLabel.text = "Carbs\n\(self.nutritionVM.carbs ?? "")"
                 
-                self.summaryLabel.text = self.summarizeVM.summary ?? ""
+                //MARK: HTML KOD DÖNÜŞTÜR.(SUMMARY)
+                let htmlString = self.summarizeVM.summary ?? ""
+                let data = htmlString.data(using: .utf8)
+                let  attributedString = try? NSAttributedString(data: data!, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+                    self.summaryLabel.attributedText = attributedString
                 
                 if let urlString = URL(string: self.detailData?.image ?? ""){
                     DispatchQueue.main.async {
