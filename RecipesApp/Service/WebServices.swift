@@ -28,6 +28,7 @@ class WebServices{
             let result = try? JSONDecoder().decode(Recipes.self, from: response.data!)
             
             if let result = result {
+                print(result)
                 completion(result.results)
             }
                 

@@ -57,18 +57,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yD7-1q-OLY">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="usB-lP-5Du"/>
+                                    <constraint firstAttribute="width" constant="100" id="y2C-em-zRT"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pig-rx-ADx" secondAttribute="bottom" id="6pC-82-lbk"/>
+                            <constraint firstItem="yD7-1q-OLY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CQ0-V7-4Aq"/>
                             <constraint firstItem="Pig-rx-ADx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JaI-Ff-8qf"/>
+                            <constraint firstItem="yD7-1q-OLY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gPm-uL-WVh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pig-rx-ADx" secondAttribute="trailing" id="loh-Oq-fAN"/>
                             <constraint firstItem="Pig-rx-ADx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wda-XM-3wz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Reg-sn-T3o"/>
                     <connections>
+                        <outlet property="spinner" destination="yD7-1q-OLY" id="cCn-4C-9zd"/>
                         <outlet property="tableView" destination="Pig-rx-ADx" id="Xfn-T7-bSb"/>
                         <segue destination="QlF-dE-SPa" kind="show" identifier="DetailsVC" id="4NX-MI-amo"/>
                     </connections>
@@ -81,17 +91,17 @@
         <scene sceneID="oO0-QC-8ih">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="QlF-dE-SPa" customClass="DetailVC" customModule="RecipesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IlY-O1-ki4">
+                    <view key="view" contentMode="scaleToFill" id="IlY-O1-ki4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-kG-mhx">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-kG-mhx">
                                 <rect key="frame" x="0.0" y="140" width="414" height="1060"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-aq-9kz" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="430.5" height="1200"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="1Bs-nP-A1E">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="1Bs-nP-A1E">
                                                 <rect key="frame" x="8" y="324" width="414.5" height="141.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY1-2o-CIZ">
