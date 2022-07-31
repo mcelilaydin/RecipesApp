@@ -29,11 +29,15 @@ class HomeVC: UIViewController {
         self.spinner.startAnimating()
         tableView.dataSource = self
         tableView.delegate = self
-        title = "Recipes"
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
+        
         setUp()
         self.spinner.hidesWhenStopped = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.title = "Recipes"
+        tabBarController?.navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
     }
     
     func setUp(){
@@ -45,7 +49,6 @@ class HomeVC: UIViewController {
             self.tableView.isHidden = true
             DispatchQueue.main.async {
                 self.spinner.startAnimating()
-               
                 self.tableView.reloadData()
                 self.tableView.isHidden = false
                 self.spinner.stopAnimating()
@@ -108,20 +111,6 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource,UISearchResultsUpda
         self.navigationController?.pushViewController(vc!, animated: true)
         return indexPath
     }
-    
-    /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastSectionIndex = tableView.numberOfSections - 1
-        let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
-        if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
-           // print("this is the last cell")
-           // let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-            spinner.startAnimating()
-        //    spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
-
-            self.tableView.tableFooterView = spinner
-            self.tableView.tableFooterView?.isHidden = false
-        }
-    }*/
     
    
 }

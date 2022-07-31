@@ -9,7 +9,7 @@ import Foundation
 
 struct RecipeListViewModel {
     
-    let recipes : [Resultt]
+    var recipes : [Resultt]
     
 }
 

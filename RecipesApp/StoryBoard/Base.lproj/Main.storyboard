@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--Recipes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="RecipesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pig-rx-ADx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="KNm-yg-sQb" customClass="RecipeTableViewCell" customModule="RecipesApp" customModuleProvider="target">
@@ -65,17 +65,18 @@
                                 </constraints>
                             </activityIndicatorView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="HCl-kZ-1xL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pig-rx-ADx" secondAttribute="bottom" id="6pC-82-lbk"/>
-                            <constraint firstItem="yD7-1q-OLY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CQ0-V7-4Aq"/>
-                            <constraint firstItem="Pig-rx-ADx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JaI-Ff-8qf"/>
+                            <constraint firstItem="HCl-kZ-1xL" firstAttribute="bottom" secondItem="Pig-rx-ADx" secondAttribute="bottom" id="6pC-82-lbk"/>
+                            <constraint firstItem="yD7-1q-OLY" firstAttribute="centerX" secondItem="HCl-kZ-1xL" secondAttribute="centerX" id="CQ0-V7-4Aq"/>
+                            <constraint firstItem="Pig-rx-ADx" firstAttribute="top" secondItem="HCl-kZ-1xL" secondAttribute="top" id="JaI-Ff-8qf"/>
                             <constraint firstItem="yD7-1q-OLY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gPm-uL-WVh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pig-rx-ADx" secondAttribute="trailing" id="loh-Oq-fAN"/>
-                            <constraint firstItem="Pig-rx-ADx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wda-XM-3wz"/>
+                            <constraint firstItem="HCl-kZ-1xL" firstAttribute="trailing" secondItem="Pig-rx-ADx" secondAttribute="trailing" id="loh-Oq-fAN"/>
+                            <constraint firstItem="Pig-rx-ADx" firstAttribute="leading" secondItem="HCl-kZ-1xL" secondAttribute="leading" id="wda-XM-3wz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="star.circle" catalog="system" id="BWK-q3-r6r"/>
                     <navigationItem key="navigationItem" id="Reg-sn-T3o"/>
                     <connections>
                         <outlet property="spinner" destination="yD7-1q-OLY" id="cCn-4C-9zd"/>
@@ -85,17 +86,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955.07246376811599" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-184" y="-489"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="oO0-QC-8ih">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="QlF-dE-SPa" customClass="DetailVC" customModule="RecipesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IlY-O1-ki4">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IlY-O1-ki4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-kG-mhx">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-kG-mhx">
                                 <rect key="frame" x="0.0" y="140" width="414" height="1060"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-aq-9kz" userLabel="Content View">
@@ -197,13 +198,13 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Amo-ei-lfb"/>
+                        <viewLayoutGuide key="safeArea" id="Uv8-JW-Yka"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UDF-kG-mhx" firstAttribute="top" secondItem="Amo-ei-lfb" secondAttribute="top" id="4MW-Vt-49h"/>
-                            <constraint firstItem="UDF-kG-mhx" firstAttribute="centerX" secondItem="IlY-O1-ki4" secondAttribute="centerX" id="6We-IC-kgl"/>
+                            <constraint firstItem="UDF-kG-mhx" firstAttribute="top" secondItem="Uv8-JW-Yka" secondAttribute="top" id="4MW-Vt-49h"/>
+                            <constraint firstItem="UDF-kG-mhx" firstAttribute="centerX" secondItem="Uv8-JW-Yka" secondAttribute="centerX" id="6We-IC-kgl"/>
                             <constraint firstAttribute="bottomMargin" secondItem="UDF-kG-mhx" secondAttribute="bottom" constant="-34" id="CEx-2r-6DZ"/>
-                            <constraint firstItem="UDF-kG-mhx" firstAttribute="leading" secondItem="Amo-ei-lfb" secondAttribute="leading" id="RyP-pd-20a"/>
+                            <constraint firstItem="UDF-kG-mhx" firstAttribute="leading" secondItem="Uv8-JW-Yka" secondAttribute="leading" id="RyP-pd-20a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ic1-LS-4ey"/>
@@ -219,7 +220,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM7-cm-s02" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.753623188406" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1880" y="43"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="BA9-k7-3Qg">
+            <objects>
+                <viewController id="S6K-0t-brh" customClass="FavoriteVC" customModule="RecipesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OpX-T1-uS2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="avM-Gl-VAk">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1wZ-jN-XN1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1wZ-jN-XN1" firstAttribute="trailing" secondItem="avM-Gl-VAk" secondAttribute="trailing" id="Gz6-YD-Eyy"/>
+                            <constraint firstItem="avM-Gl-VAk" firstAttribute="top" secondItem="1wZ-jN-XN1" secondAttribute="top" id="HWs-8R-Vr2"/>
+                            <constraint firstItem="1wZ-jN-XN1" firstAttribute="bottom" secondItem="avM-Gl-VAk" secondAttribute="bottom" id="hRc-iT-PkB"/>
+                            <constraint firstItem="avM-Gl-VAk" firstAttribute="leading" secondItem="1wZ-jN-XN1" secondAttribute="leading" id="tXS-aF-U7H"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star.circle.fill" catalog="system" id="07U-Zm-ihY"/>
+                    <connections>
+                        <outlet property="favoriteTableview" destination="avM-Gl-VAk" id="Mrj-P0-EqZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aeu-PF-0if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="514.95535714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FqC-WB-Orv">
+            <objects>
+                <tabBarController id="F4Q-5I-Emt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Fhq-Ku-Vv6"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hun-qx-uWB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ffN-eW-Huw"/>
+                        <segue destination="S6K-0t-brh" kind="relationship" relationship="viewControllers" id="vb5-cT-ifN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3E8-MN-lqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2138" y="-58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QDh-TD-Mat">
@@ -232,15 +283,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5jA-s2-fLR"/>
+                        <segue destination="F4Q-5I-Emt" kind="relationship" relationship="rootViewController" id="iI7-iA-TNy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghj-Sh-4jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-3514" y="-58"/>
         </scene>
     </scenes>
     <resources>
+        <image name="star.circle" catalog="system" width="128" height="121"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

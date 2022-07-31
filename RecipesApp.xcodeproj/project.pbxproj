@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CBE6DF42896F560006546EB /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE6DF32896F560006546EB /* FavoriteVC.swift */; };
 		4CC8F73E286E7BC60018A41F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8F73D286E7BC60018A41F /* AppDelegate.swift */; };
 		4CC8F740286E7BC60018A41F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8F73F286E7BC60018A41F /* SceneDelegate.swift */; };
 		4CC8F742286E7BC60018A41F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8F741286E7BC60018A41F /* HomeVC.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CBE6DF32896F560006546EB /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		4CC8F73A286E7BC60018A41F /* RecipesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC8F73D286E7BC60018A41F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC8F73F286E7BC60018A41F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				4CC8F741286E7BC60018A41F /* HomeVC.swift */,
 				4CC8F766286E813B0018A41F /* DetailVC.swift */,
+				4CBE6DF32896F560006546EB /* FavoriteVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				4CC8F73E286E7BC60018A41F /* AppDelegate.swift in Sources */,
 				4CC8F761286E7E5B0018A41F /* WebServices.swift in Sources */,
 				4CC8F769286E82AA0018A41F /* NutritionViewModel.swift in Sources */,
+				4CBE6DF42896F560006546EB /* FavoriteVC.swift in Sources */,
 				4CC8F763286E7F510018A41F /* RecipeTableViewCell.swift in Sources */,
 				4CC8F76B286E82C80018A41F /* Nutrition.swift in Sources */,
 				4CC8F765286E7FA70018A41F /* RecipeViewModel.swift in Sources */,
