@@ -122,12 +122,23 @@
                                                     <constraint firstItem="qaK-kO-erX" firstAttribute="top" secondItem="kY1-2o-CIZ" secondAttribute="bottom" constant="25" id="Bo2-9a-Uab"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-qf-9R6">
+                                                <rect key="frame" x="156" y="565.5" width="119" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Favorite"/>
+                                                <connections>
+                                                    <action selector="favoriteButtonClicked:" destination="QlF-dE-SPa" eventType="touchUpInside" id="7d5-yS-aec"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="1Bs-nP-A1E" firstAttribute="leading" secondItem="g2C-aq-9kz" secondAttribute="leadingMargin" id="9Ni-EA-Qut"/>
+                                            <constraint firstAttribute="trailing" secondItem="uk6-qf-9R6" secondAttribute="trailing" constant="155.5" id="APt-xx-WnM"/>
                                             <constraint firstItem="1Bs-nP-A1E" firstAttribute="top" secondItem="g2C-aq-9kz" secondAttribute="top" constant="324" id="Kje-FB-JmD"/>
+                                            <constraint firstItem="uk6-qf-9R6" firstAttribute="top" secondItem="1Bs-nP-A1E" secondAttribute="bottom" constant="100" id="acX-ld-4hZ"/>
                                             <constraint firstItem="1Bs-nP-A1E" firstAttribute="trailing" secondItem="g2C-aq-9kz" secondAttribute="trailingMargin" id="ge1-2T-V1j"/>
+                                            <constraint firstItem="uk6-qf-9R6" firstAttribute="leading" secondItem="g2C-aq-9kz" secondAttribute="leading" constant="156" id="jRg-cu-7p2"/>
                                             <constraint firstAttribute="bottom" secondItem="1Bs-nP-A1E" secondAttribute="bottom" constant="734.5" id="xvZ-IM-ZJ3"/>
                                         </constraints>
                                     </view>
@@ -213,6 +224,7 @@
                         <outlet property="caloriesLabel" destination="Dac-bS-dlZ" id="oDG-bf-VOY"/>
                         <outlet property="carbsLabel" destination="TDu-od-h4s" id="Mh3-2J-c5O"/>
                         <outlet property="fatLabel" destination="z9o-TU-zEo" id="6gd-AZ-LZk"/>
+                        <outlet property="favoriteButton" destination="uk6-qf-9R6" id="S9I-8E-rHI"/>
                         <outlet property="imageView" destination="5kS-N0-goG" id="BxG-4F-JYn"/>
                         <outlet property="proteinLabel" destination="NoM-dU-357" id="rgk-n5-lnM"/>
                         <outlet property="summaryLabel" destination="qaK-kO-erX" id="FpG-DH-Vj0"/>
@@ -220,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM7-cm-s02" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880" y="43"/>
+            <point key="canvasLocation" x="1879.7101449275365" y="42.857142857142854"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="BA9-k7-3Qg">

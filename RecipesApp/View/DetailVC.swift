@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class DetailVC: UIViewController {
     
@@ -20,13 +21,14 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var summaryLabel: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     private var nutritionVM : NutritionViewModel!
     private var summarizeVM : SummarizeViewModel!
     
     var data = Data()
     
     var detailData : Resultt?
-    
     
     
     override func viewDidLoad() {
@@ -55,7 +57,7 @@ class DetailVC: UIViewController {
                 self.caloriesLabel.text = "Calories\n\(self.nutritionVM.calories ?? "")"
                 self.carbsLabel.text = "Carbs\n\(self.nutritionVM.carbs ?? "")"
                 
-                //MARK: HTML KOD DÖNÜŞTÜR.(SUMMARY)
+                //MARK: HTML PARSE
                 let htmlString = self.summarizeVM.summary ?? ""
                 let data = htmlString.data(using: .utf8)
                 let  attributedString = try? NSAttributedString(data: data!, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
@@ -78,4 +80,32 @@ class DetailVC: UIViewController {
             }
         }
     }
+
+    @IBAction func favoriteButtonClicked(_ sender: Any) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+            
+        let newFavorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: context)
+        
+        newFavorite.setValue(summarizeVM.title, forKey: "name")
+        
+        if let title = summarizeVM.title {
+            newFavorite.setValue(title, forKey: "name")
+        }
+        
+        newFavorite.setValue(summarizeVM.id, forKey: "id")
+        
+        
+        do{
+            try context.save()
+            print("success")
+        }catch{
+            print("error")
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
+        
+    }
+    
 }
