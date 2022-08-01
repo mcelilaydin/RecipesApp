@@ -101,14 +101,15 @@ extension FavoriteVC : UITableViewDelegate,UITableViewDataSource {
                     for result in results as! [NSManagedObject] {
                         
                         if let name = result.value(forKey: "name") as? String{
-                            if name == nameArray[indexPath.row] { // silecegimiz için tekrar emin olmak için
-                                context.delete(result) // coredatadan sildi
-                                nameArray.remove(at: indexPath.row) //array içinden arrayi sildik
+                            if name == nameArray[indexPath.row] {
+                                context.delete(result)
+                                nameArray.remove(at: indexPath.row)
                                 idArray.remove(at: indexPath.row)
                                 self.favoriteTableview.reloadData()
                                 
                                 do{
                                     try context.save()
+                                
                                 }catch{
                                     print("error")
                                 }
